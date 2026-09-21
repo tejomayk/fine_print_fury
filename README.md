@@ -98,7 +98,7 @@ user's Google account). The extension **never reads `.env`**; that file is
 for the CLI only, described below.
 
 There is no auto-scan. The extension does nothing to a page until you click
-Scan — see [Scope decisions](#scope-decisions) for why.
+Scan.
 
 ### CLI
 
@@ -165,92 +165,6 @@ restart at `c0` in each one, so `report.js` joins on `(source, clauseId)`
 and refuses to run — rather than silently reporting on a subset — unless
 the scans passed on the command line cover every document referenced in
 the labels file.
-
-## Honest limitations
-
-This section is the point, not a disclaimer at the bottom.
-
-- **The 100% precision at threshold 0.65 is a small-sample artifact, not a
-  guarantee.** It means zero false positives happened to land among the 50
-  labelled clauses — of which only 17 are harmful — not that the system
-  doesn't produce false positives. n=50 is small enough that a single
-  differently-worded clause could have flipped it. It will not hold at
-  real-world scale, and it should not be read as a real-world
-  false-positive rate.
-- **There is no benign reference point in the corpus.** All five documents
-  are mainstream consumer contracts of broadly similar hostility. The low
-  end of the 0–100 page score is extrapolated from the shape of the scoring
-  curve, not measured against an actual fair contract. We don't know what a
-  genuinely reader-friendly agreement scores, because none is in the eval
-  set.
-- **The page-score constant `K` is coupled to the flag threshold and the
-  question wording, not a standalone constant.** Moving one without
-  re-deriving the other silently shifts every score — `K` has already had
-  to be re-derived once, from 0.10 to 0.06, purely because the flag
-  threshold and question rubric changed underneath it (see
-  `extension/core/weights.js` for the full history).
-- **Run-to-run model variance moves page scores by roughly 1–4 points** —
-  comparable to the gap between adjacent documents in the corpus. The score
-  is reliable for separating broad bands ("this is bad" vs. "this is
-  fine"), not for ranking two similar documents against each other.
-- **45.9% of flagged clauses come back labeled `unclear`.** The Noul judged
-  the clause harmful but the Choice either wasn't confident enough in a
-  category or landed on `benign` anyway (see [How it works](#how-it-works)
-  for why that keeps the flag). In practice: a user hovering a highlight has
-  close to a coin flip's chance of seeing only "this looks harmful, we can't
-  say what kind" instead of a specific category.
-- **This is not legal advice.** It's a heuristic pointer at clauses worth
-  reading more carefully, nothing more.
-
-## Scope decisions
-
-These are decisions, not unfinished work:
-
-- **Manual scan only. No auto-detect, no `<all_urls>`.** Auto-detection
-  would mean reading every page the user visits, silently, in the
-  background. For a tool whose entire pitch is that companies quietly take
-  more than you realize, making the extension itself quietly read
-  everything you browse is not a trade worth making. `detect.js`'s
-  heuristic runs and logs a verdict on every manual scan, but it gates
-  nothing — it exists to warn, later, before a scan is spent on a page that
-  plainly isn't a contract.
-- **No cache.** At roughly half a cent and 1–2 seconds per document, caching
-  buys little for a manually-triggered scan, and a stale-invalidation bug
-  would serve verdicts scored under an old rubric — worse than being
-  slightly slower.
-- **No backend.** Bring-your-own-key keeps the key on the user's machine
-  and the entire request/response path auditable in `extension/core/`. A
-  proxy is a natural future extension (rate limiting, a shared cache, no
-  key exposed to the client) but was deliberately left out of this scope.
-
-## Repo layout
-
-```
-extension/
-  core/            segmentation, questions, weights, scoring — the shared
-                   logic used by both the extension and the CLI
-  manifest.json, background.js, content.js, popup.*, render.js, ...
-cli/
-  scan.js          segment + score a saved HTML file from the terminal
-  extract.js       HTML -> block text, used by both the CLI and eval/fetch-corpus.js
-eval/
-  corpus/          the 5-document eval corpus (gitignored; fetch-corpus.js rebuilds it)
-  labels.json      50 hand-labeled clauses
-  report.js        precision/recall/F1, confusion matrix, threshold sweep
-spike/
-  a standalone unpacked extension proving an MV3 service worker can call
-  api.typesafe.ai directly under host_permissions without hitting the CORS
-  preflight a page-context fetch would — the assumption the whole
-  architecture rests on
-```
-
-One layout choice is worth explaining: `core/` lives *inside* `extension/`,
-not beside it. A Chrome extension's root directory defines its package —
-files outside it can't be imported, packed, or unpacked. Putting `core/` at
-the repo root would make `extension/background.js`'s import of it
-unresolvable inside Chrome. The CLI and eval scripts reach *into*
-`extension/core/` from outside (`../extension/core/segment.js`, etc.); the
-extension itself never reaches out.
 
 ## License
 
