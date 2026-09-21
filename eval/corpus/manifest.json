@@ -1,0 +1,132 @@
+[
+  {
+    "outFile": "github.html",
+    "documentType": "Terms of Service",
+    "source": "github.com",
+    "url": "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service",
+    "transform": null,
+    "fetchedAt": "2026-09-21T01:05:06.791Z",
+    "checks": {
+      "isHtml": true,
+      "blockCount": 253,
+      "wordCount": 7399,
+      "wordThreshold": 1500,
+      "wordsPass": true,
+      "markerCount": 56,
+      "markerThreshold": 5,
+      "markersPass": true
+    },
+    "pass": true,
+    "first5Blocks": [
+      "GitHub Terms of Service",
+      "In this article",
+      "Thank you for using GitHub! We're happy you're here. Please read this Terms of Service agreement carefully before accessing or using GitHub. Because it is such an important contract between us and our…",
+      "Summary",
+      "A. Definitions"
+    ]
+  },
+  {
+    "outFile": "spotify.html",
+    "documentType": "Terms of Use",
+    "source": "spotify.com",
+    "url": "https://www.spotify.com/us/legal/end-user-agreement/",
+    "transform": null,
+    "fetchedAt": "2026-09-21T01:05:07.394Z",
+    "checks": {
+      "isHtml": true,
+      "blockCount": 168,
+      "wordCount": 8711,
+      "wordThreshold": 1500,
+      "wordsPass": true,
+      "markerCount": 30,
+      "markerThreshold": 5,
+      "markersPass": true
+    },
+    "pass": true,
+    "first5Blocks": [
+      "Spotify Terms of Use",
+      "Last Updated: September 4, 2026",
+      "Introduction",
+      "The Spotify Service",
+      "Your Use of the Spotify Service"
+    ]
+  },
+  {
+    "outFile": "airline-coc.html",
+    "documentType": "Contract of Carriage",
+    "source": "delta.com",
+    "url": "https://www.delta.com/us/en/legal/contract-of-carriage-dgr",
+    "transform": null,
+    "fetchedAt": "2026-09-21T01:05:08.188Z",
+    "checks": {
+      "isHtml": true,
+      "blockCount": 230,
+      "wordCount": 12265,
+      "wordThreshold": 1500,
+      "wordsPass": true,
+      "markerCount": 8,
+      "markerThreshold": 5,
+      "markersPass": true
+    },
+    "pass": true,
+    "first5Blocks": [
+      "Contract of Carriage: U.S.",
+      "RULE 10: SMOKE FREE SERVICE, Go to footer note",
+      "RULE 18: ELECTRONIC SURVEILLANCE, Go to footer note",
+      "RULE 11: PASSENGER MEDICAL OXYGEN, Go to footer note",
+      "RULE 19: FLIGHT DELAYS/CANCELLATIONS, Go to footer note"
+    ]
+  },
+  {
+    "outFile": "saas-eula.html",
+    "documentType": "EULA",
+    "source": "coatsdigital.com",
+    "url": "https://www.coatsdigital.com/en/eula-saas/",
+    "transform": null,
+    "fetchedAt": "2026-09-21T01:05:08.968Z",
+    "checks": {
+      "isHtml": true,
+      "blockCount": 265,
+      "wordCount": 9713,
+      "wordThreshold": 1500,
+      "wordsPass": true,
+      "markerCount": 97,
+      "markerThreshold": 5,
+      "markersPass": true
+    },
+    "pass": true,
+    "first5Blocks": [
+      "Coats Digital End User Licensing Agreement (EULA) SaaS",
+      "Home",
+      "Coats Digital End User Licensing Agreement (EULA) SaaS",
+      "Definitions",
+      "In this Agreement, unless inconsistent with or otherwise indicated by the context, the definitions set out hereunder shall bear the following meanings to them-"
+    ]
+  },
+  {
+    "outFile": "lease.html",
+    "documentType": "Lease Agreement",
+    "source": "rocketlawyer.com",
+    "url": "https://www.rocketlawyer.com/real-estate/landlords/residential-property/document/lease-agreement",
+    "transform": "trim",
+    "fetchedAt": "2026-09-21T01:05:09.099Z",
+    "checks": {
+      "isHtml": true,
+      "blockCount": 672,
+      "wordCount": 24685,
+      "wordThreshold": 1500,
+      "wordsPass": true,
+      "markerCount": 108,
+      "markerThreshold": 5,
+      "markersPass": true
+    },
+    "pass": true,
+    "first5Blocks": [
+      "This Lease Agreement (the \"Agreement\") is made and entered on (the \"Effective Date\") by and between (the \"Landlord\") and the following tenants:",
+      "RESIDENTIAL LEASE",
+      "THE LEASE IMPOSES IMPORTANT LEGAL OBLIGATIONS. MANY RIGHTS AND RESPONSIBILITIES OF THE PARTIES ARE GOVERNED BY CHAPTER 83, PART II, RESIDENTIAL LANDLORD AND TENANT ACT, FLORIDA STATUTES. A COPY OF THE…",
+      "This Lease Agreement (the \"Agreement\") is made and entered on (the \"Effective Date\") by and between (the \"Landlord\") and the following tenants:",
+      "(the \"Tenant\")"
+    ]
+  }
+]

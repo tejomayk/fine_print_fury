@@ -1,0 +1,452 @@
+[
+  {
+    "clauseId": "c56",
+    "source": "saas-eula.html",
+    "text": "Without limiting the foregoing, in the event that payment of any sums due to Coats Digital under the Agreement become subject to any deduction or withholding in respect of or on account of tax, the Customer shall pay to Coats Digital such additional sum as may be required in order that the net amount actually received and retained by Coats Digital under this Agreement (after such deduction or withholding has been made) shall be equal to the full amount that would have been received and retained by Coats Digital had no such deduction or withholding been required to be made.",
+    "label": "harmful",
+    "category": "fee_shifting",
+    "rationale": "Tax gross-up clause: if payments to Coats Digital become subject to withholding tax, the customer must pay extra so Coats Digital nets the full amount -- shifts a real cost onto the reader, but this is such standard commercial payment-mechanics boilerplate (and doesn't waive any right/remedy) that whether it clears the harm bar at all is a genuine coin flip; no category in the rubric is a clean fit either (fee_shifting is the closest, though it's about tax, not legal costs).",
+    "ambiguity": 0.7
+  },
+  {
+    "clauseId": "c98",
+    "source": "saas-eula.html",
+    "text": "5.10 above Coats Digital shall be entitled to levy reasonable Additional Charges in the manner set out in clause",
+    "label": "benign",
+    "category": null,
+    "rationale": "A garbled, cross-reference-heavy fragment (\"...Coats Digital shall be entitled to levy reasonable Additional Charges in the manner set out in clause...\") -- the underlying idea (company can charge more) could be read as harmful, but it's explicitly qualified as \"reasonable\" and tied to a defined procedure elsewhere; the segmentation damage here makes this a genuine coin flip rather than a confident call either way.",
+    "ambiguity": 0.65
+  },
+  {
+    "clauseId": "c201",
+    "source": "airline-coc.html",
+    "text": "4. Loss Due To Government or Airport Action Delta is not liable for loss, damage, or delay of a passenger’s checked baggage, carry-on baggage, wheelchair or assistive device, or any personal item that may result from a security search of such items conducted by an agent of any local, state, or federal agency in charge of airport security screening, or from confiscation by an agent of any local, state, or federal agency.",
+    "label": "harmful",
+    "category": "liability_dodge",
+    "rationale": "Disclaims Delta's liability for baggage loss/damage from a government security search or confiscation. Real liability limitation and cost-shift onto the passenger, but since the actual actor causing the loss is a government agency (not Delta), a reader arguably had little recourse against the airline for that anyway -- genuine near-miss.",
+    "ambiguity": 0.5
+  },
+  {
+    "clauseId": "c112",
+    "source": "spotify.html",
+    "text": "In the event of any failure of the Spotify Service to conform to any applicable warranty, you may notify Apple and Apple will refund the applicable purchase price for the App to you; and, to the maximum extent permitted by applicable law, Apple has no other warranty obligation whatsoever with respect to the Spotify Service.",
+    "label": "harmful",
+    "category": "liability_dodge",
+    "rationale": "Limits the reader's recourse for a Spotify Service warranty failure to an Apple-issued refund of the purchase price, and states Apple has no other warranty obligation -- narrows the reader's remedy. Ambiguity is high because it still guarantees a specific refund route and is largely App-Store-mandated boilerplate rather than Spotify's own choice.",
+    "ambiguity": 0.5
+  },
+  {
+    "clauseId": "c614",
+    "source": "lease.html",
+    "text": "Payment of the late charge does not remedy the late payment for purposes of establishing habitual late payment of rent.",
+    "label": "harmful",
+    "category": "termination_without_cause",
+    "rationale": "States that paying a late charge does NOT cure the pattern of habitual late payment -- removes the tenant's implicit expectation that paying up resolves the issue, preserving grounds for the landlord to treat repeat lateness as a default/non-renewal trigger regardless of payment. Reads as a neutral clarification on its face, which is exactly the kind of mundane-sounding-but-substantive clause worth over-sampling; category fit (termination_without_cause) is imperfect since there is technically \"cause,\" just no cure path.",
+    "ambiguity": 0.5
+  },
+  {
+    "clauseId": "c123",
+    "source": "saas-eula.html",
+    "text": "If Coats Digital determine that a Hosted Service Credit is owed to the Customer, then this will be applied to the next billing period.",
+    "label": "benign",
+    "category": null,
+    "rationale": "Describes an SLA-style credit being applied to the next billing period when one is owed. Doesn't explicitly foreclose a cash refund elsewhere in the contract, so it reads as routine SaaS credit administration -- but \"credit, not cash\" mechanics are a recognized way of softening real refund rights, so this is a genuine near-miss worth a second look rather than a confident benign call.",
+    "ambiguity": 0.5
+  },
+  {
+    "clauseId": "c168",
+    "source": "github.html",
+    "text": "Communications made through email or GitHub Support's messaging system will not constitute legal notice to GitHub or any of its officers, employees, agents or representatives in any situation where notice to GitHub is required by contract or any law or regulation. Legal notice to GitHub must be in writing and served on GitHub's legal agent. GitHub only offers support via email, in-Service communications, and electronic messages.",
+    "label": "benign",
+    "category": null,
+    "rationale": "Requires formal written legal notice served on GitHub's legal agent rather than accepting support email as legal notice. This raises the bar for the reader to give effective legal notice (a real practical friction), but it is standard, mutual-style \"notices must be in writing\" contract boilerplate rather than a right/remedy being taken away -- genuine judgment call.",
+    "ambiguity": 0.4
+  },
+  {
+    "clauseId": "c137",
+    "source": "github.html",
+    "text": "You agree to only use such Confidential Information for the express purpose of testing and evaluating the Beta Preview (the “Purpose”), and not for any other purpose.",
+    "label": "benign",
+    "category": null,
+    "rationale": "Restricts the reader's use of GitHub's confidential Beta Preview information to the stated testing purpose -- this constrains the reader, but it is a standard, mutual-style NDA obligation tied to voluntary early access, not the company acting against the reader's interests or stripping a right the reader otherwise had.",
+    "ambiguity": 0.4
+  },
+  {
+    "clauseId": "c753",
+    "source": "lease.html",
+    "text": "9. Tenant agrees to clean and dry any visible moisture on windows, walls, and other surfaces, including personal property, as soon as reasonably possible. (Note: Mold can grow on damp surfaces within 24 to 48 hours.)",
+    "label": "benign",
+    "category": null,
+    "rationale": "Requires the tenant to clean/dry visible moisture to prevent mold -- a standard maintenance duty, but the framing could later be used to shift blame for mold damage (a known landlord-responsibility area) onto the tenant, which is why this isn't a fully obvious call.",
+    "ambiguity": 0.4
+  },
+  {
+    "clauseId": "c168",
+    "source": "saas-eula.html",
+    "text": "(ii) loss of actual or anticipated profits; (iii) loss of contracts, loss of business or loss of opportunity; (iv) loss of use of money; (v) loss of anticipated savings; (vi) loss of revenue or ex gratia payments; (vii) loss of goodwill or reputation;",
+    "label": "harmful",
+    "category": "liability_dodge",
+    "rationale": "A bare list of damage types excluded from recovery (lost profits, lost business, lost goodwill, etc.) -- clearly part of a broader limitation-of-liability clause; reads oddly as an isolated fragment (a segmentation artifact) but the substance is unambiguous once you see it's an exclusion list.",
+    "ambiguity": 0.35
+  },
+  {
+    "clauseId": "c167",
+    "source": "github.html",
+    "text": "For contractual purposes, you (1) consent to receive communications from us in an electronic form via the email address you have submitted or via the Service; and (2) agree that all Terms of Service, agreements, notices, disclosures, and other communications that we provide to you electronically satisfy any legal requirement that those communications would satisfy if they were on paper. This section does not affect your non-waivable rights. 2. Legal Notice to GitHub Must Be in Writing",
+    "label": "benign",
+    "category": null,
+    "rationale": "Consent to receive legal notices electronically, with an explicit carve-out that it \"does not affect your non-waivable rights.\" This is standard e-notice/ESIGN-style boilerplate; it's a genuine near-miss because it does substitute email for paper notice, but it's procedural and self-limits to not touch non-waivable rights.",
+    "ambiguity": 0.35
+  },
+  {
+    "clauseId": "c270",
+    "source": "airline-coc.html",
+    "text": "2. Partially Used Tickets a. When making changes to partially used tickets, Delta will apply one of the following procedures resulting in the lowest fare: i.",
+    "label": "benign",
+    "category": null,
+    "rationale": "A truncated fragment of a partially-used-ticket procedure that promises the lowest resulting fare -- reads as reader-favorable/administrative, but the fragment is cut off mid-list so the full mechanism isn't visible.",
+    "ambiguity": 0.35
+  },
+  {
+    "clauseId": "c172",
+    "source": "saas-eula.html",
+    "text": "12. Coats Digital may disclose Confidential Information which relates to the Customer to an Affiliate or any relevant Affiliate’s directors, employees, advisers and agents; or where necessary for the provision of the Licensed Software and Services, any subcontractor of Coats Digital or its Affiliates, provided that such information is disclosed solely for the purposes of this Agreement.",
+    "label": "harmful",
+    "category": "broad_data_sharing",
+    "rationale": "Permits Coats Digital to disclose the customer's Confidential Information to affiliates and subcontractors without additional consent, beyond the direct contracting party -- fits broad_data_sharing; ambiguity reflects that it is purpose-limited (only for performing the agreement) rather than for marketing/advertising, which is more reasonable than the category's typical use case.",
+    "ambiguity": 0.35
+  },
+  {
+    "clauseId": "c557",
+    "source": "lease.html",
+    "text": "Persons staying more than consecutive days or more than days in any calendar year shall NOT be considered original tenants of the Premises.",
+    "label": "benign",
+    "category": null,
+    "rationale": "Defines a guest-occupancy threshold beyond which someone is no longer treated as an \"original tenant\" -- administrative/definitional; the template numbers are unfilled, which adds interpretive uncertainty but doesn't change the clause's basic character.",
+    "ambiguity": 0.35
+  },
+  {
+    "clauseId": "c161",
+    "source": "spotify.html",
+    "text": "If you choose to file an arbitration proceeding, the allocation and payment of Arbitration Fees will be governed by the NAM Rules, unless a different allocation is required by court order or for this Arbitration Agreement to be enforced. You and Spotify agree that arbitration should be cost effective for all parties.",
+    "label": "benign",
+    "category": null,
+    "rationale": "Describes arbitration-fee allocation deferring to NAM Rules and states arbitration \"should be cost effective for all parties\" -- procedural and consumer-protective in framing rather than imposing an unusual cost on the reader; ambiguity reflects that it's still part of the larger arbitration apparatus.",
+    "ambiguity": 0.35
+  },
+  {
+    "clauseId": "c149",
+    "source": "airline-coc.html",
+    "text": "C) Failure To Appear If you fail to appear for any flight in your itinerary without changing or canceling your ticket prior to departure, Delta may cancel your reservation for all remaining flights in your itinerary. Except where required by law, there will be no remaining value to your ticket. 1) Reservations Subject to Cancellation for Failure to Meet Check-in and Boarding Deadlines",
+    "label": "harmful",
+    "category": "no_refunds",
+    "rationale": "No-show forfeits remaining ticket value for the rest of the itinerary -- takes real financial value from the reader; ambiguity reflects that this is standard, widely-understood airline policy rather than a hidden trap, but it still meets the harm bar.",
+    "ambiguity": 0.3
+  },
+  {
+    "clauseId": "c113",
+    "source": "airline-coc.html",
+    "text": "For the avoidance of doubt, this rule also applies to unaccompanied children ages 15-17 who have not requested Unaccompanied Minor Service.",
+    "label": "benign",
+    "category": null,
+    "rationale": "A scope clarifier (\"this rule also applies to...\") referencing some other rule not shown in this fragment -- as a standalone unit it doesn't itself restrict the reader; ambiguity reflects not being able to see what \"this rule\" actually requires.",
+    "ambiguity": 0.3
+  },
+  {
+    "clauseId": "c272",
+    "source": "lease.html",
+    "text": "Section 66-28-505(b), Tenant specifically waives Tenant's right to Notice of Nonpayment of Rent by Landlord.",
+    "label": "harmful",
+    "category": "termination_without_cause",
+    "rationale": "Tenant explicitly waives a statutory right to notice of nonpayment of rent -- a clear waiver of a legal protection, which is the strongest signal of harm; ambiguity here is mostly about which of the 15 categories best fits, since none precisely covers \"waived statutory notice right\" -- termination_without_cause is the closest, since losing this notice right smooths the path to eviction/default action.",
+    "ambiguity": 0.3
+  },
+  {
+    "clauseId": "c138",
+    "source": "github.html",
+    "text": "You should use the same degree of care as you would with your own confidential information, but no less than reasonable precautions to prevent any unauthorized use, disclosure, publication, or dissemination of our Confidential Information.",
+    "label": "benign",
+    "category": null,
+    "rationale": "Imposes a standard duty of care over GitHub's confidential information equivalent to the reader's own -- a mutual-style confidentiality obligation tied to voluntary beta participation, not an adverse action against the reader.",
+    "ambiguity": 0.3
+  },
+  {
+    "clauseId": "c46",
+    "source": "saas-eula.html",
+    "text": "Any increase or decrease in the required number of Users shall be pre-approved by Coats Digital which shall not be withheld unreasonably.",
+    "label": "benign",
+    "category": null,
+    "rationale": "User-count changes require Coats Digital's pre-approval, but approval \"shall not be withheld unreasonably\" -- the reasonableness qualifier tempers what would otherwise be a one-sided approval chokepoint, making this a closer call than a bare approval requirement would be.",
+    "ambiguity": 0.3
+  },
+  {
+    "clauseId": "c173",
+    "source": "saas-eula.html",
+    "text": "Clause 1 shall not apply to the disclosure of Confidential Information with the prior written consent of the disclosing party or if and to the extent: (i) required by applicable law, any competent regulatory authority or recognised stock exchange;",
+    "label": "benign",
+    "category": null,
+    "rationale": "A carve-out to a confidentiality obligation allowing disclosure with consent or when legally/regulatorily required -- a standard, narrow legal-compliance exception rather than a broad license to share the reader's information.",
+    "ambiguity": 0.25
+  },
+  {
+    "clauseId": "c132",
+    "source": "github.html",
+    "text": "In addition, Beta Previews are not subject to the same security measures and auditing to which the Service has been and is subject. By using a Beta Preview, you use it at your own risk.",
+    "label": "harmful",
+    "category": "liability_dodge",
+    "rationale": "Explicitly disclaims the usual security/auditing protections for Beta Previews and puts the risk on the user (\"use it at your own risk\") -- shifts risk onto the reader even though beta disclaimers are common.",
+    "ambiguity": 0.2
+  },
+  {
+    "clauseId": "c92",
+    "source": "github.html",
+    "text": "This Section D.9 does not apply to Access solely for the purpose of academic research or if, on the date you Access the Content, the number of monthly active users of the products or services made available by you is less than 700 million in the preceding calendar month.",
+    "label": "benign",
+    "category": null,
+    "rationale": "This is an exemption carving OUT of some other restriction (Section D.9) for academic research and for entities under 700M monthly active users -- it narrows an obligation rather than imposing one, and favors nearly every reader; the underlying D.9 restriction (not shown here) might be harmful, but this fragment itself is not.",
+    "ambiguity": 0.2
+  },
+  {
+    "clauseId": "c204",
+    "source": "airline-coc.html",
+    "text": "Any action must be commenced within one year after such alleged occurrence, and Delta may deny any claim not presented in the manner and within the timeframes set forth above.",
+    "label": "harmful",
+    "category": "liability_dodge",
+    "rationale": "Shortens the effective window to bring a claim to one year and lets Delta deny claims not filed in the required manner/timeframe -- reduces the reader's remedy, a real harm even though limitation periods are common in carriage contracts.",
+    "ambiguity": 0.2
+  },
+  {
+    "clauseId": "c383",
+    "source": "lease.html",
+    "text": "To the extent permitted by law, Tenant agrees to indemnify, hold harmless, and defend Landlord from and against any and all losses, claims, liabilities, and expenses, including reasonable attorney fees, if any, which Landlord may suffer or incur in connection with Tenant's possession, use or misuse of the Premises, except Landlord's act or negligence.",
+    "label": "harmful",
+    "category": "fee_shifting",
+    "rationale": "Tenant indemnifies Landlord for losses connected to Tenant's use/misuse of the premises -- shifts legal cost/risk onto the tenant; the carve-out for Landlord's own negligence makes it somewhat more balanced but the core indemnity obligation is still one-sided.",
+    "ambiguity": 0.2
+  },
+  {
+    "clauseId": "c194",
+    "source": "saas-eula.html",
+    "text": "If a Force Majeure Event prevents a party (the “Affected Party”) from performing any of its obligations (other than for the payment of amounts due under this Agreement) to the other (the “Other Party”) the Affected Party shall not be liable to the Other Party and shall be released from its obligations to the extent that its ability to perform such obligations has been affected by the Force Majeure Event.",
+    "label": "benign",
+    "category": null,
+    "rationale": "A mutual force majeure clause (applies to \"a party\"/\"the Affected Party\" generically, excludes payment obligations from relief) -- standard bilateral risk allocation, not one-sided against the reader.",
+    "ambiguity": 0.2
+  },
+  {
+    "clauseId": "c142",
+    "source": "spotify.html",
+    "text": "The Notice, Informal Resolution Period, and Informal Settlement Conference are intended to give the parties a meaningful opportunity to resolve Disputes informally.",
+    "label": "benign",
+    "category": null,
+    "rationale": "Describes an informal resolution process intended to give both parties a chance to resolve disputes before formal proceedings -- procedural and reader-protective in framing.",
+    "ambiguity": 0.2
+  },
+  {
+    "clauseId": "c546",
+    "source": "lease.html",
+    "text": "Smoking is authorized only in designated smoking areas specifically identified throughout the Property, including: Smoking is prohibited in any area in or on the Premises and on the Property, both private and common, whether enclosed or outdoors. This policy applies to all owners, tenants, guests, employees, and servicepersons.",
+    "label": "benign",
+    "category": null,
+    "rationale": "A smoking-location house rule applied evenly to owners, tenants, guests, and staff -- a standard property-use/health rule, not a waiver of any right or protection or a cost/risk shift onto the tenant specifically.",
+    "ambiguity": 0.15
+  },
+  {
+    "clauseId": "c299",
+    "source": "lease.html",
+    "text": "Tenant will be in default of this Agreement if Tenant fails to comply with any material provisions of this Agreement by which Tenant is bound.",
+    "label": "benign",
+    "category": null,
+    "rationale": "Defines when the tenant is in default (failure to comply with material provisions) -- a standard definitional trigger, not an unusual grant of power beyond ordinary contract enforcement.",
+    "ambiguity": 0.15
+  },
+  {
+    "clauseId": "c108",
+    "source": "airline-coc.html",
+    "text": "E) Unaccompanied Minor Service Charge In addition to the applicable fare, unaccompanied minors for whom Unaccompanied Minor Service is required or has been requested must pay an unaccompanied minor service charge in the amounts set forth below.",
+    "label": "benign",
+    "category": null,
+    "rationale": "Discloses a mandatory fee for an opt-in service (unaccompanied minor service) -- pricing transparency for a service the reader chooses to use, not a hidden imposition.",
+    "ambiguity": 0.15
+  },
+  {
+    "clauseId": "c50",
+    "source": "spotify.html",
+    "text": "Unless otherwise required by law, we do not provide refunds or credits for any partial subscription periods, except as expressly stated in these Terms.",
+    "label": "harmful",
+    "category": "no_refunds",
+    "rationale": "Flat denial of refunds/credits for partial subscription periods -- textbook no_refunds.",
+    "ambiguity": 0.1
+  },
+  {
+    "clauseId": "c295",
+    "source": "lease.html",
+    "text": "Tenant will be responsible to pay for all of the Landlord's legal fees and reasonable costs included attorney fees.",
+    "label": "harmful",
+    "category": "fee_shifting",
+    "rationale": "Tenant must pay all of Landlord's legal fees/attorney costs -- a one-sided fee-shifting clause, textbook example.",
+    "ambiguity": 0.1
+  },
+  {
+    "clauseId": "c178",
+    "source": "github.html",
+    "text": "If you have a dispute with one or more Users, you agree to release GitHub from any and all claims, demands and damages (actual and consequential) of every kind and nature, known and unknown, arising out of or in any way connected with such disputes.",
+    "label": "harmful",
+    "category": "liability_dodge",
+    "rationale": "Requires the reader to release GitHub from all claims/damages arising from disputes with other users -- a broad liability release, clearly harmful.",
+    "ambiguity": 0.1
+  },
+  {
+    "clauseId": "c119",
+    "source": "spotify.html",
+    "text": "To the fullest extent permitted by applicable law, you and Spotify agree that each party may bring claims (whether in court or in arbitration) against the other only in an individual capacity.",
+    "label": "harmful",
+    "category": "class_action_waiver",
+    "rationale": "Each party may bring claims only in an individual capacity -- a class/collective action waiver.",
+    "ambiguity": 0.1
+  },
+  {
+    "clauseId": "c128",
+    "source": "saas-eula.html",
+    "text": "The Customer warrants and represents that, in each case in any jurisdiction and under any applicable law, the Customer Data / the use of the Customer Data by Coats Digital in accordance with this Agreement will not: breach the provisions of any law, statute or regulation, including the Data Protection Laws; infringe the Intellectual Property Rights or other legal rights of any person; or give rise to any cause of action against Coats Digital The Customer will defend, indemnify and hold harmless Coats Digital from and against any loss, cost, liability or damage, including legal fees, for which Coats Digital becomes liable arising from or relating to any Claim relating to Customer Data, including but not limited to any Claim brought by a third party alleging that Customer Data, or your use of any Hosted Services provided is in breach of this Agreement, infringes or misappropriates the Intellectual Property Rights of a third party or violates applicable law.",
+    "label": "harmful",
+    "category": "fee_shifting",
+    "rationale": "Customer must indemnify/defend Coats Digital for claims relating to Customer Data -- classic indemnification shifting legal risk/cost onto the reader.",
+    "ambiguity": 0.1
+  },
+  {
+    "clauseId": "c53",
+    "source": "spotify.html",
+    "text": "Unless we inform you otherwise, we will allow you to retain access to the Paid Subscription for the remainder of the then-current billing period, after which we will downgrade your account to the free version of the Spotify Service.",
+    "label": "benign",
+    "category": null,
+    "rationale": "Describes retaining paid access through the end of the current billing period before downgrading -- this is reader-favorable (you keep what you paid for), not a taking-away of a right.",
+    "ambiguity": 0.1
+  },
+  {
+    "clauseId": "c45",
+    "source": "github.html",
+    "text": "GitHub does not target our Service to children under 13, and we do not permit any Users under 13 on our Service. If we learn of any User under the age of 13, we will terminate that User’s Account immediately.",
+    "label": "benign",
+    "category": null,
+    "rationale": "COPPA-driven policy: GitHub doesn't target under-13 users and terminates their accounts if found. This only affects an ineligible population (children under 13) and reflects a legal compliance obligation, not an adverse action against the intended reader.",
+    "ambiguity": 0.1
+  },
+  {
+    "clauseId": "c179",
+    "source": "github.html",
+    "text": "You agree to indemnify us, defend us, and hold us harmless from and against any and all claims, liabilities, and expenses, including attorneys’ fees, arising out of your use of the Website and the Service, including but not limited to your violation of this Agreement, provided that GitHub (1) promptly gives you written notice of the claim, demand, suit or proceeding; (2) gives you sole control of the defense and settlement of the claim, demand, suit or proceeding (provided that you may not settle any claim, demand, suit or proceeding unless the settlement unconditionally releases GitHub of all liability); and (3) provides to you all reasonable assistance, at your expense.",
+    "label": "harmful",
+    "category": "fee_shifting",
+    "rationale": "Reader indemnifies GitHub for claims arising from the reader's use/violation of the agreement -- classic indemnification shifting legal cost onto the reader.",
+    "ambiguity": 0.1
+  },
+  {
+    "clauseId": "c59",
+    "source": "spotify.html",
+    "text": "In addition, Brands must be transparent to our users about disclosing any endorsements or consideration provided to artists, songwriters, users, or any other party and must comply with all applicable laws, regulations, and codes of practice when engaging in the foregoing practices.",
+    "label": "benign",
+    "category": null,
+    "rationale": "Requires \"Brands\" to disclose endorsements/consideration to other users and follow the law -- a transparency/compliance requirement that protects listeners from undisclosed endorsements, not a harm to the general reader.",
+    "ambiguity": 0.1
+  },
+  {
+    "clauseId": "c92",
+    "source": "airline-coc.html",
+    "text": "One child less than 2 years old not occupying a seat may travel with an Applicable Full fare-paying passenger at least 18 years old or parent/legal guardian at no additional charge. Additional infants, and infants occupying a seat, must pay the applicable Full fare. A maximum of 2 infants is permitted for each adult. Delta recommends that any child occupying a seat be placed in an approved safety seat.",
+    "label": "benign",
+    "category": null,
+    "rationale": "Describes infant fare policy (free lap infant under 2, paid seat for additional/older infants) -- informational/pricing, and relatively generous to the reader.",
+    "ambiguity": 0.1
+  },
+  {
+    "clauseId": "c94",
+    "source": "spotify.html",
+    "text": "Some jurisdictions do not allow the exclusion of implied warranties or limitations on applicable statutory rights of a consumer, so the exclusion and limitations in this section may not apply to you.",
+    "label": "benign",
+    "category": null,
+    "rationale": "A statutory-rights savings clause: explicitly says the liability exclusions above may NOT apply where local law forbids them, preserving the reader's rights. This is the opposite of harmful -- it protects the reader.",
+    "ambiguity": 0.05
+  },
+  {
+    "clauseId": "c665",
+    "source": "lease.html",
+    "text": "However, Tenant shall not by this provision be required to make alterations to the exterior of the building or alterations of a structural nature.",
+    "label": "benign",
+    "category": null,
+    "rationale": "Explicitly protects the tenant from having to make structural or exterior alterations -- this is a protection favoring the reader, not a harm.",
+    "ambiguity": 0.05
+  },
+  {
+    "clauseId": "c6",
+    "source": "airline-coc.html",
+    "text": "It applies only to travel entirely within the United States of America and states the terms upon which Delta offers to transport passengers.",
+    "label": "benign",
+    "category": null,
+    "rationale": "Pure scope/purpose statement about which flights the document covers -- administrative, no effect on rights.",
+    "ambiguity": 0.05
+  },
+  {
+    "clauseId": "c111",
+    "source": "saas-eula.html",
+    "text": "Where access to the Licensed Software is provided via Hosted Services, Coats Digital, its agents and sub-contractors shall use reasonable endeavours to maintain at least 99% availability of said Hosted Services per calendar quarter.",
+    "label": "benign",
+    "category": null,
+    "rationale": "Commits to at least 99% uptime for Hosted Services -- an SLA commitment that favors the reader.",
+    "ambiguity": 0.05
+  },
+  {
+    "clauseId": "c101",
+    "source": "lease.html",
+    "text": "If Landlord deducts for damage to the Premises, Landlord shall provide to Tenant an itemized list of such damage and written evidence indicating the actual or estimated cost of repairs necessary to correct such damage.",
+    "label": "benign",
+    "category": null,
+    "rationale": "Requires the Landlord to provide an itemized list and written evidence of repair costs before deducting for damage -- a transparency protection favoring the tenant.",
+    "ambiguity": 0.05
+  },
+  {
+    "clauseId": "c22",
+    "source": "spotify.html",
+    "text": "Our dynamic content offering is constantly evolving and adapting to the needs of the Spotify community.",
+    "label": "benign",
+    "category": null,
+    "rationale": "Pure marketing filler (\"our dynamic content offering is constantly evolving\") -- no legal effect on the reader whatsoever.",
+    "ambiguity": 0.02
+  },
+  {
+    "clauseId": "c1",
+    "source": "spotify.html",
+    "text": "Please read these Terms of Use (\"Terms\") carefully as they govern your use of (which includes access to) Spotify's personalized services for streaming music and other content, including all of our websites and software applications that incorporate or link to these Terms (collectively, the \"Spotify Service\") and any music, videos, podcasts, audiobooks, or other material that is made available through the Spotify Service (\"Content\").",
+    "label": "benign",
+    "category": null,
+    "rationale": "Introductory/definitional paragraph describing what the Terms cover and defining \"Spotify Service\"/\"Content\" -- purely administrative.",
+    "ambiguity": 0.02
+  },
+  {
+    "clauseId": "c19",
+    "source": "github.html",
+    "text": "“Affiliate” means any entity that directly or indirectly controls, is controlled by, or is under common control with a party, where \"control\" means having more than fifty percent (50%) ownership or the right to direct the management of the entity. For the avoidance of doubt, Microsoft is an Affiliate of GitHub.",
+    "label": "benign",
+    "category": null,
+    "rationale": "Pure definition of \"Affiliate,\" including a specific carve-out naming Microsoft -- definitional, no effect on rights.",
+    "ambiguity": 0.02
+  },
+  {
+    "clauseId": "c20",
+    "source": "airline-coc.html",
+    "text": "Co-Terminal - Two or more relatively adjacent airports which for the purpose of these fares will be considered the same point.",
+    "label": "benign",
+    "category": null,
+    "rationale": "Glossary definition of \"Co-Terminal\" airports -- purely definitional.",
+    "ambiguity": 0.02
+  },
+  {
+    "clauseId": "c21",
+    "source": "airline-coc.html",
+    "text": "Days - Full calendar days, including weekend days and legal holidays (but not including the date that any notice is sent).",
+    "label": "benign",
+    "category": null,
+    "rationale": "Glossary definition of \"Days\" -- purely definitional.",
+    "ambiguity": 0.02
+  }
+]

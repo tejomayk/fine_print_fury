@@ -1,0 +1,6 @@
+.env
+node_modules/
+spike/key.local.js
+.DS_Store
+eval/corpus/*.html
+*.log

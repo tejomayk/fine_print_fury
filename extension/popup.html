@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Fine Print Fury</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="popup">
+      <header class="header">
+        <span class="logo" aria-hidden="true">🔥</span>
+        <h1>Fine Print Fury</h1>
+      </header>
+
+      <section id="view-loading" class="view">
+        <p class="muted">Loading…</p>
+      </section>
+
+      <section id="view-entry" class="view" hidden>
+        <p class="explainer">
+          Scores the fine print you're about to agree to. Bring your own Jev
+          API key — it stays on this device and is only ever sent to
+          <code>api.typesafe.ai</code> to score a page.
+        </p>
+
+        <label class="field-label" for="api-key-input">Jev API key</label>
+        <input
+          id="api-key-input"
+          class="text-input"
+          type="password"
+          autocomplete="off"
+          autocapitalize="off"
+          spellcheck="false"
+          placeholder="sk-..."
+        />
+
+        <button id="save-btn" class="btn btn-primary" type="button">
+          <span id="entry-spinner" class="spinner" hidden></span>
+          <span class="btn-label">Save key</span>
+        </button>
+
+        <p id="entry-message" class="message" hidden></p>
+
+        <a
+          class="link"
+          href="https://typesafe.ai"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Get a key at typesafe.ai</a
+        >
+      </section>
+
+      <section id="view-stored" class="view" hidden>
+        <p class="explainer">Your key is saved on this device. Ready to scan.</p>
+
+        <button id="scan-btn" class="btn btn-primary" type="button">
+          <span id="scan-spinner" class="spinner" hidden></span>
+          <span class="btn-label">Scan this page</span>
+        </button>
+
+        <p id="scan-message" class="message" hidden></p>
+
+        <a id="replace-key-link" class="link" href="#">Replace key</a>
+      </section>
+    </div>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

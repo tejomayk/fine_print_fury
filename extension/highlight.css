@@ -1,0 +1,78 @@
+/* Fine Print Fury — inline clause highlighting (spec §3.5).
+ *
+ * Injected via chrome.scripting.insertCSS (see background.js) rather than a
+ * manifest content_scripts block, per §3.1's "no content_scripts block"
+ * decision. Loaded once per scan, alongside domwalk.js/detect.js/
+ * hoverCard.js/render.js/content.js.
+ *
+ * Every rule is scoped under .ffp-mark (or the compound .ffp-mark.ffp-*
+ * severity classes render.js actually assigns, e.g. class="ffp-mark
+ * ffp-high"). That compound gives each severity rule specificity (0,2,0) —
+ * enough to beat a hostile page's own `mark { ... }` element rule (0,0,1)
+ * or a single generic class rule (0,1,0) without reaching for !important
+ * anywhere below.
+ *
+ * Never changes layout: only background/text-decoration/outline, none of
+ * which affects box metrics, so no clause can reflow the surrounding page
+ * text. Colors use semi-transparent overlays instead of an opaque fill or
+ * a hardcoded text color, since the host page's background and text color
+ * are unknown — a page could be light or dark themed.
+ */
+
+.ffp-mark {
+  /* Reset the UA default <mark> chrome (opaque yellow bg, black text) —
+     left alone, it would fight both our severity colors and a dark page's
+     own light text color. */
+  background: none;
+  background-image: none;
+  color: inherit;
+  font: inherit;
+  cursor: help;
+
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+.ffp-mark.ffp-low {
+  /* Amber underline, subtle — the least severe band. text-decoration
+     never participates in box layout, so it can't reflow text. */
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: rgba(217, 119, 6, 0.85); /* amber-600 */
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
+.ffp-mark.ffp-medium {
+  /* Amber background fill. Semi-transparent so the page's own text color
+     (light or dark) keeps showing through instead of us guessing one. */
+  background-image: linear-gradient(rgba(245, 158, 11, 0.38), rgba(245, 158, 11, 0.38));
+}
+
+.ffp-mark.ffp-high {
+  /* Red background fill — the most severe band, most opaque so it reads
+     as a warning against both light and dark page backgrounds. */
+  background-image: linear-gradient(rgba(220, 38, 38, 0.48), rgba(220, 38, 38, 0.48));
+}
+
+.ffp-mark:focus {
+  /* Visible focus style for keyboard users tabbing through marks
+     (render.js sets tabindex="0" on every mark). outline is drawn outside
+     the box and never reserves space, so it can't reflow anything. */
+  outline: 2px solid currentColor;
+  outline-offset: 1px;
+}
+
+.ffp-mark:focus:not(:focus-visible) {
+  /* Prefer the focus ring only for keyboard/programmatic focus where the
+     browser supports :focus-visible; mouse-driven focus already gets a
+     hover affordance via cursor:help + the hover card. */
+  outline: none;
+}
+
+.ffp-mark:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 1px;
+}

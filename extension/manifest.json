@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Fine Print Fury",
+  "version": "0.1.0",
+  "description": "Scores the fine print you're about to agree to.",
+  "permissions": ["activeTab", "storage", "scripting"],
+  "host_permissions": ["https://api.typesafe.ai/*"],
+  "background": { "service_worker": "background.js", "type": "module" },
+  "action": { "default_popup": "popup.html" }
+}

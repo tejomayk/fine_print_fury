@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "FPF CORS Spike",
+  "version": "0.1.0",
+  "host_permissions": ["https://api.typesafe.ai/*"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  }
+}

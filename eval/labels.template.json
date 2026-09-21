@@ -1,0 +1,38 @@
+[
+  {
+    "clauseId": "c12",
+    "source": "github.html",
+    "text": "You agree that any dispute, claim, or controversy arising out of or relating to these Terms shall be resolved solely by binding arbitration on an individual basis, and you waive your right to participate in any class, collective, or representative action.",
+    "label": "harmful",
+    "category": "forced_arbitration",
+    "rationale": "Explicit binding-arbitration clause bundled with a class-action waiver; textbook forced_arbitration, not a near-miss.",
+    "ambiguity": 0.05
+  },
+  {
+    "clauseId": "c47",
+    "source": "github.html",
+    "text": "\"Content\" means any text, graphics, images, music, software, audio, video, or other material that a user submits, posts, or displays on or through the Service.",
+    "label": "benign",
+    "category": null,
+    "rationale": "Pure definitional clause establishing a term used elsewhere in the document; grants nothing, waives nothing, favors no side.",
+    "ambiguity": 0.02
+  },
+  {
+    "clauseId": "c89",
+    "source": "airline-coc.html",
+    "text": "Carrier's liability for damages sustained in case of delay, cancellation, diversion, or in connection with the furnishing or failure to furnish accommodations or facilities is limited to the amount of the fare paid, and Carrier shall not be liable for consequential or incidental damages arising therefrom.",
+    "label": "harmful",
+    "category": "liability_dodge",
+    "rationale": "Reads like routine tariff boilerplate that most readers skim past, but it caps real financial recourse at the ticket price regardless of actual harm -- meets the harm bar even though the tone is unremarkable rather than alarming, which is exactly the near-miss this label set should over-sample.",
+    "ambiguity": 0.55
+  },
+  {
+    "clauseId": "c103",
+    "source": "spotify.html",
+    "text": "Spotify AB is a company registered in Sweden with company number 556703-7295, whose registered office is at Regeringsgatan 19, 111 53 Stockholm, Sweden.",
+    "label": "benign",
+    "category": null,
+    "rationale": "Corporate registration/notice boilerplate with no effect on the reader's rights or obligations.",
+    "ambiguity": 0.02
+  }
+]
